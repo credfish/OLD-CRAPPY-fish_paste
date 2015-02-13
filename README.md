@@ -1,5 +1,5 @@
 # fish_paste
-Standard preprocessing to create analysis ready data
+Standard preprocessing to create analysis ready REA data
 
 * requires the R package ProjectTemplate
 * in addition all the packages specified in the config/global text file
