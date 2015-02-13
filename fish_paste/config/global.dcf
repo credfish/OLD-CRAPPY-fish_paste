@@ -1,0 +1,12 @@
+data_loading: TRUE
+cache_loading: TRUE
+recursive_loading: FALSE
+munging: TRUE
+logging: FALSE
+load_libraries: TRUE
+libraries: reshape, plyr, ggplot2, stringr, lubridate, gdata, gstat, gmt,
+        lattice
+as_factors: TRUE
+data_tables: FALSE
+version: 0.6
+attach_internal_libraries: TRUE
