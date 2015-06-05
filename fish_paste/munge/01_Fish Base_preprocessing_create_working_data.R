@@ -25,7 +25,7 @@ x<-df
 # clean up the data to only fields we currently use
 DATA_COLS<-c("SITEVISITID", "METHOD", "DATE_", "OBS_YEAR",  "SITE",
              "REEF_ZONE",  "DEPTH_BIN",  "ISLAND", "LATITUDE",  "LONGITUDE",
-             "REGION" , "REGION_NAME", "SECTOR", "SPECIAL_AREA", "EXCLUDE_FLAG",
+             "REGION" , "REGION_NAME", "SECTOR", "SPECIAL_AREA", "EXCLUDE_FLAG", "HABITAT_CODE",
              "REP",  "REPLICATEID", "DIVER", "HABITAT_CODE", "DEPTH",
              "HARD_CORAL", "MA", "TA",  "CCA",  "SAND",  "SOFT_CORAL",
              "CLAM" , "SPONGE", "CORALLIMORPH", "CYANO", "TUNICATE",
