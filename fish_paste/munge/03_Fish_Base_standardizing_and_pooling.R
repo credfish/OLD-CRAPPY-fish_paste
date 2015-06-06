@@ -93,8 +93,7 @@ if(CURRENT_SCHEME=="RAMP_BASIC") {
         wsd[wsd$ANALYSIS_SEC %in% c("PATI_PT_MPA",
                                     "ACHANG_MPA", "TUMON_BAY_MPA",
                                     "PITI_BOMB_MPA",
-                                    "GUAM_MP_MINUS_ACHANG"),]
-        $ANALYSIS_SEC<-"GUAM_MP"
+                                    "GUAM_MP_MINUS_ACHANG"),]$ANALYSIS_SEC<-"GUAM_MP"
 }
 if(CURRENT_SCHEME=="MARI2011") {wsd<-wsd[(
         wsd$REGION %in% c("N.MARIAN", "S.MARIAN") & wsd$OBS_YEAR==2011),]}
