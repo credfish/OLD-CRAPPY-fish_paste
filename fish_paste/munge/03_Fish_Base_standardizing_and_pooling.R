@@ -62,10 +62,10 @@ sectors$ANALYSIS_STRATA<-paste(sectors$REEF_ZONE, sectors$DEPTH_BIN, sep='')
 
 # THIS IS A CRITICAL STEP - SET THE ANALYSIS SCHEME HERE .. ALL STEPS BELOW
 # WILL WORK OFF THIS SCHEME (THIS IS HOW ISLANDS ARE BROKEN DOWN INTO SECTORS
-# Analysis Schemes are : RAMP_BASIC", "MARI2011", "MARI2014", "AS_SANCTUARY"
-#CURRENT_SCHEME<-"RAMP_BASIC";
+# Analysis Schemes are : "RAMP_BASIC", "MARI2011", "MARI2014", "AS_SANCTUARY"
+CURRENT_SCHEME<-"RAMP_BASIC";
 #CURRENT_SCHEME<-"MARI2011"
-CURRENT_SCHEME<-"MARI2014"
+#CURRENT_SCHEME<-"MARI2014"
 #CURRENT_SCHEME<-"AS_SANCTUARY"
 sectors$ANALYSIS_SEC<-sectors[,CURRENT_SCHEME]
 
@@ -90,11 +90,12 @@ if(CURRENT_SCHEME=="RAMP_BASIC") {
         # and changing ANALYSIS_SEC for all other GUAM MPA sectors
         # to the RAMP base one "GUAM_MP"
         wsd<-wsd[!(wsd$ANALYSIS_SEC == "ACHANG_MPA" & wsd$ANALYSIS_YEAR==2014),]
-        wsd[wsd$ANALYSIS_SEC %in% c("PATI_PT_MPA",
-                                    "ACHANG_MPA", "TUMON_BAY_MPA",
-                                    "PITI_BOMB_MPA",
-                                    "GUAM_MP_MINUS_ACHANG"),]
-        $ANALYSIS_SEC<-"GUAM_MP"
+
+        changerows<-wsd$ANALYSIS_SEC %in% c("PATI_PT_MPA",
+        "ACHANG_MPA", "TUMON_BAY_MPA",
+        "PITI_BOMB_MPA",
+        "GUAM_MP_MINUS_ACHANG")
+        wsd$ANALYSIS_SEC[changerows]<-"GUAM_MP"
 }
 if(CURRENT_SCHEME=="MARI2011") {wsd<-wsd[(
         wsd$REGION %in% c("N.MARIAN", "S.MARIAN") & wsd$OBS_YEAR==2011),]}
