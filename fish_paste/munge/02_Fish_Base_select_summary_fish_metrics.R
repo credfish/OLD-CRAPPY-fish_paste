@@ -34,7 +34,7 @@ data.cols<-c(data.cols, "0_20", "20_50", "50_plus")
 
 names(wsd)
 #names(wsd)[35:37]<-c("0_20", "20_50", "50_plus")
-names(wsd)[match(c("(0,20]", "(20,50]","(50,Inf]" ),
+names(wsd)[match(c("[0,20]", "(20,50]","(50,Inf]" ),
                  names(wsd))] <- c("0_20", "20_50", "50_plus")
 names(wsd)
 wsd$BSR<-(wsd$HARD_CORAL+wsd$CCA)/(wsd$MA + wsd$TA)

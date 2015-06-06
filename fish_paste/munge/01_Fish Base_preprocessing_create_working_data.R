@@ -136,6 +136,11 @@ x[is.na(x$SIZE_),]$SIZE_<-0
 x[is.na(x$LATITUDE),]$LATITUDE<-0
 x[is.na(x$LONGITUDE),]$LONGITUDE<-0
 
+#temporary fix to ensure that a fish species "SAND" does not confuse the code when there is also a benthic category "SAND".
+# both SAND and SNDP exist in the species_table and refer to the same taxa (Parapercis sp.)
+# better long term fix is to change species codes of SAND into SNDP in the database
+x[x$SPECIES=="SAND",]$SPECIES="SNDP"  
+
 ###x[is.na(x$LMAX),]$LMAX<-999
 
 ## separate out the north and south marianas
